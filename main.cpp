@@ -64,6 +64,31 @@ public:
 	}
 };
 
+struct Booleansb : Pair
+{
+public:
+	bool value;
+	Booleansb(std::string key, bool value)
+	{
+		key = this->key;
+		value = this->value;
+	}
+};
+
+struct Datesb : Pair
+{
+public:
+	int year;
+	int month;
+	int day;
+	Datesb(int year, int month, int day)
+	{
+		year = this->year;
+		month = this->month;
+		day = this->day;
+	}
+};
+
 int main()
 {
 	return 0;
