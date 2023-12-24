@@ -33,6 +33,18 @@ public:
 	}
 };
 
+struct floatsb : Pair
+{
+public:
+	float value;
+
+	Floatsb(std::string key, float value)
+	{
+		key = this->key;
+		value = this->value;
+	}
+};
+
 struct Stringsb : Pair
 {
 public:
