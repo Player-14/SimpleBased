@@ -3,6 +3,8 @@
 #include <vector>
 #include <array>
 
+
+
 class Pair
 {
 public:
@@ -33,7 +35,7 @@ public:
 	}
 };
 
-struct floatsb : Pair
+struct Floatsb : Pair
 {
 public:
 	float value;
@@ -59,8 +61,7 @@ public:
 struct Arraysb : Pair
 {
 public:
-	//int max_el;
-	int value[1024];
+	typedef(value[1024]);
 };
 
 struct Moneysb : Pair
@@ -101,7 +102,31 @@ public:
 	}
 };
 
+struct Vectorsb : Pair
+{
+public:
+	Vectorsb(int argc, const *argv[])
+	{
+		std::vector<decltype(argv)> data = {argv};
+	}
+};
+
+class Table // : Simplebase
+{
+public:
+	std::string name;
+	std::vector<Pair> container;
+};
+
+class Simplebase
+{
+public:
+	std::string db_name;
+	std::vector<Table> tables;
+};
+
 int main()
 {
 	return 0;
 }
+
