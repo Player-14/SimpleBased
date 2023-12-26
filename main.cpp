@@ -3,8 +3,6 @@
 #include <vector>
 #include <array>
 
-
-
 class Pair
 {
 public:
@@ -116,12 +114,15 @@ class Table // : Simplebase
 public:
 	std::string name;
 	std::vector<Pair> container;
+	Table(std::string name)
+	{
+		name = this->name;
+	}
 };
 
 class Simplebase
 {
 public:
-	std::string db_name;
 	std::vector<Table> tables;
 };
 
